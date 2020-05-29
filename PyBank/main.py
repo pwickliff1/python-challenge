@@ -64,4 +64,6 @@ txtpath.write("Total: $" + str(profit) + "\n")
 txtpath.write("Average Change: $" + str(round(change/(row_cnt-1),2)) + "\n")
 txtpath.write("Greatest Increase in Profits: " + greatest_date[3:] + "-20" + greatest_date[0:2] + " ($" + str(greatest_profit) + ")\n" )
 txtpath.write("Greatest Decrease in Profits: " + least_date[3:] + "-20" + least_date[0:2] + " ($" + str(least_profit) + ")" )
+
+# Close output file
 txtpath.close()

@@ -67,5 +67,7 @@ txtpath.write(pd_sorted_results.iloc[0]['Name'] + ": " + "{:.3f}".format((pd_sor
 txtpath.write(pd_sorted_results.iloc[1]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[1]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[1]['Votes']) + ")\n") 
 for x in range(0, 4):
     txtpath.write(pd_sorted_results.iloc[x]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[x]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[x]['Votes']) + ")\n") 
-txtpath.write(pd_sorted_results.iloc[3]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[3]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[3]['Votes']) + ")\n") 
 txtpath.write("-------------------------")   
+
+# Close output file
+txtpath.close()
