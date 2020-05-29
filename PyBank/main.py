@@ -40,10 +40,11 @@ with open(csvpath) as csvfile:
             least_profit =(int(row[1]) - old_row)
             least_date = row[0]
                 
-        # Add each month loss/profit unless except for first row
+        # Add each month loss/profit except for first row
         if old_row != 0:
             change = change + (int(row[1]) - old_row)
-                 
+        
+        # Save current row to compare with next row    
         old_row = int(row[1])
 
 # Print report to screen
@@ -55,7 +56,7 @@ print("Average Change: $" + str(round(change/(row_cnt-1),2)))
 print("Greatest Increase in Profits: " + greatest_date[3:] + "-20" + greatest_date[0:2] + " ($" + str(greatest_profit) + ")" )
 print("Greatest Decrease in Profits: " + least_date[3:] + "-20" + least_date[0:2] + " ($" + str(least_profit) + ")" )
 
-
+# Print report to file
 txtpath.write("Financial Analysis\n" )
 txtpath.write("----------------------------\n")
 txtpath.write("Total Months: " + str(row_cnt) + "\n")

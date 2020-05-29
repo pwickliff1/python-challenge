@@ -54,8 +54,10 @@ print("Election Results")
 print("-------------------------")
 print("Total Votes:  " + str(row_cnt) )        
 print("-------------------------")   
-for x in range(0, 4):
-    print(pd_sorted_results.iloc[x]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[x]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[x]['Votes']) + ")") 
+print(pd_sorted_results.iloc[0]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[0]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[0]['Votes']) + ")") 
+print(pd_sorted_results.iloc[1]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[1]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[1]['Votes']) + ")") 
+print(pd_sorted_results.iloc[2]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[2]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[2]['Votes']) + ")") 
+print(pd_sorted_results.iloc[3]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[3]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[3]['Votes']) + ")") 
 print("-------------------------")   
 
 # Print report to file
@@ -65,7 +67,6 @@ txtpath.write("Total Votes:  " + str(row_cnt) + "\n" )
 txtpath.write("-------------------------\n")   
 txtpath.write(pd_sorted_results.iloc[0]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[0]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[0]['Votes']) + ")\n") 
 txtpath.write(pd_sorted_results.iloc[1]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[1]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[1]['Votes']) + ")\n") 
-for x in range(0, 4):
-    txtpath.write(pd_sorted_results.iloc[x]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[x]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[x]['Votes']) + ")\n") 
+txtpath.write(pd_sorted_results.iloc[2]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[2]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[2]['Votes']) + ")\n") 
 txtpath.write(pd_sorted_results.iloc[3]['Name'] + ": " + "{:.3f}".format((pd_sorted_results.iloc[3]['Votes']/row_cnt)*100) + "% (" + str(pd_sorted_results.iloc[3]['Votes']) + ")\n") 
 txtpath.write("-------------------------")   
